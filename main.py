@@ -24,24 +24,24 @@ def user_signup():
         return redirect("/?error=" + error)
 
     if (password) == "":
-        error = "Please complete the password field."
-        return redirect("/?error=" + error)
+        error2 = "Please complete the password field."
+        return redirect("/?error=" + error2)
 
     if (verify) == "":
-        error = "Please verify the password you chose."
-        return redirect("/?error=" + error)
+        error3 = "Please verify the password you chose."
+        return redirect("/?error=" + error3)
     #if the password and verify don't match, give an error
     if (password) != (verify):
-        error = "The passwords you entered do not match"
-        return redirect("/?error=" + error)
+        error3 = "The passwords you entered do not match"
+        return redirect("/?error=" + error3)
 
     if len(password) < 4:
-        error = "Your password is too short!"
-        return redirect("/?error=" + error)
+        error2 = "Your password is too short!"
+        return redirect("/?error=" + error2)
 
     if len(password) > 20:
-        error = "Your password is too long!"
-        return redirect("/?error=" + error)
+        error2 = "Your password is too long!"
+        return redirect("/?error=" + error2)
 
     # if the e-mail isn't an e-mail, give an error
     emaillength=0
@@ -56,14 +56,14 @@ def user_signup():
     if email =="":
         return render_template('hello.html', username=username)
     elif (emaillength <4) or (emaillength > 20):
-        error = "Please enter a valid e-mail address"
-        return redirect("/?error=" + error)
+        error4 = "Please enter a valid e-mail address"
+        return redirect("/?error=" + error4)
     elif periods != 1:
-        error = "Please enter a valid e-mail address"
-        return redirect("/?error=" + error)
+        error4 = "Please enter a valid e-mail address"
+        return redirect("/?error=" + error4)
     elif atsigns !=1:
-        error = "Please enter a valid e-mail address"
-        return redirect("/?error=" + error)
+        error4 = "Please enter a valid e-mail address"
+        return redirect("/?error=" + error4)
     
 
     return render_template('hello.html', username=username)

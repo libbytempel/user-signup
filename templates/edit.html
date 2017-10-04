@@ -8,28 +8,28 @@
             </label>
             <input type="text" name="username"/>
             {% if error %}
-            <class error>{{ error }}</class>
+            <class='error'>{{ error }}</class>
             {% endif %}
             <label for="password">
             <br>Password:
             </label>
             <input type="password" name="password"/>
             {% if error %}
-            <class error>{{ error }}</class>
+            <class='error'>{{ error2 }}</class>
             {% endif %}
             <label for="verify">
             <br>Verify password:
             </label>
             <input type="password" name="verify"/>
             {% if error %}
-            <class error>{{ error }}</class>
+            <class='error'>{{ error3 }}</class>
             {% endif %}
             <label for="email">
             <br>Email (optional):
             </label>
             <input type="text" name="email" value=""/>
             {% if error %}
-            <class error>{{ error }}</class>
+            <class='error'>{{ error4 }}</class>
             {% endif %}
             <br><input type="submit" value="Submit Query"/>
         </form>
